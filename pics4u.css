@@ -1,0 +1,243 @@
+:root {
+  --navy: #081b41;
+  --blue: #1565c0;
+  --yellow: #ffd54f;
+  --light: #f8fbff;
+  --text: #13243f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8fbff 0%, #eaf4ff 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  color: white;
+  padding: 24px 24px 56px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-link,
+.primary-btn,
+.secondary-btn,
+.buy-btn {
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-link {
+  color: white;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 10px 16px;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(255, 213, 79, 0.2);
+  color: var(--yellow);
+  border: 1px solid rgba(255, 213, 79, 0.3);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 14px;
+}
+
+.hero-copy p {
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--navy);
+  font-weight: 700;
+  padding: 12px 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.secondary-btn {
+  display: inline-block;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+  padding: 12px 20px;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+}
+
+.hero-card ul {
+  margin-left: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 54px 24px 70px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  color: #4e5d74;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(8, 27, 65, 0.12);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+}
+
+.product-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(8, 27, 65, 0.16);
+}
+
+.product-card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #5d6b80;
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 0.9rem;
+  color: var(--blue);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.buy-btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 10px 16px;
+  font-weight: 600;
+}
+
+.buy-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  padding: 0 24px 40px;
+  color: #506074;
+}
+
+footer a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
