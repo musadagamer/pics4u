@@ -101,7 +101,7 @@
     <div class="card">
       <h1>Make Your Own Pic</h1>
       <p>Tell us what you want, and we will review your request through the Discord community.</p>
-      <form id="request-form" action="https://formsubmit.co/ajax/darealgriddy@gmail.com" method="POST">
+      <form id="request-form" action="https://formsubmit.co/darealgriddy@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Pics4U custom request" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="request-confirmation.html" />
@@ -145,7 +145,7 @@
             method: 'POST',
             body: new FormData(form),
             headers: {
-              Accept: 'application/json'
+              Accept: 'application/x-www-form-urlencoded'
             }
           });
 
